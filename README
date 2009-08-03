@@ -98,6 +98,22 @@ setting variable. In your settings.py, do this:
 
 If you set this to False, you don't have to include the urls.
 
+Shortening
+----------
+
+Each network can be set to shorten urls using one of two services:
+
+* http://is.gd
+* http://bit.ly
+
+is.gd allows you to post a link without any authentication, while bit.ly
+requires login, but as a result allows you to track clicks that come via
+shares from your site.
+
+In your settings.py file set the following two variables for bit.ly to work:
+
+    SHARER_BITLY_LOGIN = <your login>
+    SHARER_BITLY_KEY = <your bit.ly api key>
 
 Initial Data
 ------------
