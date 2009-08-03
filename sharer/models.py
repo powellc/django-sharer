@@ -12,6 +12,8 @@ class SocialNetwork(models.Model):
     icon = models.ImageField(_("Icon"), upload_to="sharer/icons", blank=True, null=True)
     url = models.CharField(_("URL"), max_length=255)
     active = models.BooleanField(_("Active"), default=True)
+    isgd_shorten = models.BooleanField(_("Shorten URL with is.gd"), default=False)
+    bitly_shorten = models.BooleanField(_("Shorten URL with bit.ly"), default=False)
 
     admin_objects = models.Manager()
     objects = SocialNetworkManager()

@@ -12,7 +12,7 @@ class SocialNetworkAdmin(admin.ModelAdmin):
 
     fieldsets = (
         (None, {
-            "fields": ("name", "icon", "url", "active", )
+            "fields": ("name", "icon", "url", "active", "isgd_shorten", "bitly_shorten", )
         }),
     )
 
