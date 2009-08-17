@@ -49,7 +49,7 @@ def share_url(network, title="", url=""):
 	page = urllib.urlopen('http://is.gd/api.php?longurl=%s' % url)    
 	url = page.read()
     if network.bitly_shorten and BITLY_LOGIN:
-        page = urllib.urlopen('http://api.bit.ly/shorten?version=2.0.1&longUrl=%s&login=%s&apiKey=%s' % (url, BITLY_LOGIN, BITLY_KEY))	
+        page = urllib.urlopen('http://api.bit.ly/shorten?version=2.0.1&longUrl=%s&login=%s&apiKey=%s&history=1' % (url, BITLY_LOGIN, BITLY_KEY))	
         response = json.load(page)
         url = results=response["results"][url]["shortUrl"]
     return network.url % {
