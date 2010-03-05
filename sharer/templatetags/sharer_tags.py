@@ -1,6 +1,6 @@
 from urlparse import urljoin
 import urllib
-import simplejson as json
+from django.utils import simplejson  as json
 
 
 from django import template
